@@ -5,14 +5,6 @@ O projeto integra as áreas de **Cerimonial**, **Marketing** e **Audiovisual**, 
 
 ------
 
-## Arquitetura
-
-<div align="center">
-  <img src="assets/arquitetura_eventos.png" alt="Arquitetura do Sistema" width="700">
-</div>
-
-------
-
 ## Estrutura do Projeto
 
 ```bash
@@ -95,7 +87,7 @@ programacao_radical2025/
 ├── docs/
 │   └── Dicionario_de_Dados.csv            # Dicionário completo do banco
 │
-├── mmanage.py                             # Um CLI do DJANGO do Python, respnsável por rodar o projeto
+├── manage.py                             # Um CLI do DJANGO do Python, respnsável por rodar o projeto
 ├── docker-compose.yml                     # Orquestração dos containers
 ├── requirements.txt                       # Dependências Python
 └── README.md
@@ -115,7 +107,7 @@ Se trata de uma modelagem OLTP, de um banco de dados relacional.
 
 ## Tecnologias Utilizadas
 
-- **Linguagem:**	Python 3.12.2
+- **Linguagens:**	Python 3.12.2 e Javascript
 - **Web:** Django
 - **Integração:**	FastAPI
 - **Banco de Dados:**	PostgreSQL
@@ -144,9 +136,10 @@ docker compose up --build
 ```
 
 **3. Acesse os serviços**
-- Frontend: ```	http://localhost:8000 ```
+- Frontend: ```	http://127.0.0.1:8000 ```
 - Documentação API: ``` http://localhost:8000/docs ```
 - Banco de Dados``` localhost:5432 ```
+- API: ```	http://127.0.0.1:8000/api/ ```
 ```bash
 Usuário: admin
 Senha: admin
@@ -176,7 +169,6 @@ Banco: radical
 
 ## Conceitos Técnicos Envolvidos
 - Containerização com Docker: isola a API e o banco de dados em ambientes virtuais.
--	ORM com SQLAlchemy: abstrai operações SQL e simplifica a manipulação de dados.
 -	UUIDs: garantem unicidade global nos registros.
 -	ENUMs: padronizam status de eventos e aprovações (pendente, aprovado, reprovado e cancelado).
 -	FastAPI + Swagger: oferece endpoints rápidos, assíncronos e documentados automaticamente.
