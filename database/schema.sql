@@ -5,7 +5,8 @@ CREATE TYPE status_enum AS ENUM(
     'Pendente', 
     'Aprovado', 
     'Reprovado', 
-    'Cancelado'
+    'Cancelado',
+    'Concluido'
 );
 
 --------------------
